@@ -18,13 +18,33 @@
     }
 
     .page {
-      max-width: 960px;
+      max-width: 900px;
       margin: 30px auto;
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 20px 60px rgba(0,0,0,0.12);
     }
+	
+	.download-btn{
+  background:#2b6cb0;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.download-btn:hover{
+  background:#1f5fa8;
+}
+
+@media print{
+  .download-btn{
+      display:none;
+  }
+}
 
     /* ── HEADER ── */
     .header {
@@ -314,12 +334,63 @@
     }
 
     @media print {
-      html, body {
-        background: #fff !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        color-adjust: exact !important;
-      }
+
+  @page {
+    size: A4;
+    margin: 8mm;
+  }
+
+  html,
+  body {
+    background: white !important;
+    zoom: 0.92;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page{
+    width:100%;
+    margin:0;
+    box-shadow:none;
+    border-radius:0;
+  }
+
+  .header{
+    padding:30px 35px 25px;
+  }
+
+  .header h1{
+    font-size:30px;
+  }
+
+  .lang-strip{
+    padding:8px 35px;
+  }
+
+  .sidebar{
+    padding:24px 18px;
+  }
+
+  .main{
+    padding:24px 25px;
+  }
+
+  .section{
+    margin-bottom:20px;
+  }
+
+  .exp-item,
+  .sub-role,
+  .sidebar-section,
+  .summary-card{
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .footer{
+    display:none;
+  }
+}
 
       /* Hide browser header/footer (date, URL) */
       head, title { display: none; }
@@ -333,8 +404,12 @@
       }
 
       /* Prevent page breaks inside experience items */
-      .exp-item { page-break-inside: avoid; }
-      .sub-role  { page-break-inside: avoid; }
+      .exp-item {
+    page-break-inside: auto;
+    break-inside: auto;
+}
+      .sub-role  { page-break-inside: avoid; 
+break-inside: avoid;	  }
       .sidebar-section { page-break-inside: avoid; }
     }
   </style>
@@ -351,6 +426,7 @@
         <div class="contact-item"><div class="icon">📍</div> Meudon, France (92360)</div>
         <div class="contact-item"><div class="icon">📱</div> +33 752 106 788</div>
         <div class="contact-item"><div class="icon">✉️</div> gargrajan20@gmail.com</div>
+		<button onclick="window.print()" class="download-btn">📄 Download PDF</button>
       </div>
     </div>
   </div>
