@@ -325,6 +325,90 @@
       letter-spacing: 0.5px;
     }
     .footer span { color: #63b3ed; font-weight: 600; }
+	
+	.footer span {
+  color: #63b3ed;
+  font-weight: 600;
+}
+
+
+/* ─────────────────────────────
+   MOBILE RESPONSIVE
+───────────────────────────── */
+
+@media screen and (max-width: 768px) {
+
+  .page {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .header {
+    padding: 25px 20px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lang-strip {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .body-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .exp-period {
+    width: fit-content;
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}
+
+
+/* ── PRINT STYLES ── */
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+   ...
+}
 
     /* ── PRINT STYLES ── */
     @page {
