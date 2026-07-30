@@ -39,6 +39,20 @@
 .download-btn:hover{
   background:#1f5fa8;
 }
+.header-content{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.profile-photo img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid rgba(255,255,255,0.25);
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
 
 @media print{
   .download-btn{
@@ -338,6 +352,20 @@
 
 @media screen and (max-width: 768px) {
 
+	@media screen and (max-width:768px){
+
+    .header-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profile-photo img{
+        width:110px;
+        height:110px;
+    }
+
+}
+
   .page {
     margin: 0;
     border-radius: 0;
@@ -503,7 +531,10 @@ break-inside: avoid;	  }
 
   <!-- HEADER -->
   <div class="header">
-    <div class="header-inner">
+    <div class="header-inner header-content">
+		<div class="profile-photo">
+RajanPhoto.jpg" alt="Rajan Garg">
+</div>
       <h1>Rajan Garg</h1>
       <div class="title">Oracle EBS Techno-Functional Consultant &amp; Service Delivery Manager</div>
       <div class="contact-row">
